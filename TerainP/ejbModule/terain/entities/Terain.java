@@ -3,6 +3,8 @@ package terain.entities;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -21,6 +23,12 @@ public class Terain implements Serializable {
 	private String nom;
 	private int capacite;
 	private String type;
+	@ManyToOne(cascade = CascadeType.PERSIST) 
+	@JoinColumn(name="idZone", nullable=false)
+	private Zone zone;
+	
+	@ManyToMany
+	List<Club> clubs;
 	private static final long serialVersionUID = 1L;
 
 	public Terain() {

@@ -9,13 +9,17 @@
 		<class>terain.entities.Ville</class>
 		<class>terain.entities.Terain</class>
 		<class>terain.entities.Club</class>
-		<class>terain.entities.pack</class>
+		<class>terain.entities.Pack</class>
 		<class>terain.entities.Abonment</class>
 		<class>terain.entities.Client</class>
-		 <properties>
+		<class>terain.entities.Test</class>
+		<class>terain.entities.ReservationPK</class>
+		<class>terain.entities.Reservation</class>
+	 	<properties>
 		    <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" />
-		 
-        	<property name="javax.persistence.schema-generation.database.action"  value="drop-and-create"/>
-            </properties>
+		 	<property name="javax.persistence.schema-generation.database.action"  value="drop-and-create"/>
+        	
+        </properties>
 	</persistence-unit>
 </persistence>
+

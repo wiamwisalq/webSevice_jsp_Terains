@@ -5,22 +5,22 @@ import java.lang.String;
 import javax.persistence.*;
 
 /**
- * Entity implementation class for Entity: pack
+ * Entity implementation class for Entity: Pack
  *
  */
 @Entity
 
-public class pack implements Serializable {
+public class Pack implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String desc;
+	private String description;
 	private double prix;
 	private int nbr;
 	private static final long serialVersionUID = 1L;
 
-	public pack() {
+	public Pack() {
 		super();
 	}   
 	public int getId() {
@@ -31,11 +31,11 @@ public class pack implements Serializable {
 		this.id = id;
 	}   
 	public String getDesc() {
-		return this.desc;
+		return this.description;
 	}
 
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.description = desc;
 	}   
 	public double getPrix() {
 		return this.prix;

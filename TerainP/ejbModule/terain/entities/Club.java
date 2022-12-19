@@ -2,6 +2,8 @@ package terain.entities;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -16,6 +18,11 @@ public class Club implements Serializable {
 	private int id;
 	private String nom;
 	private String type;
+	@ManyToMany
+	List<Terain> terains;
+	@ManyToOne(cascade = CascadeType.PERSIST) 
+	@JoinColumn(name="idPack", nullable=false)
+	private Pack pack;
 	private static final long serialVersionUID = 1L;
 
 	public Club() {

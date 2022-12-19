@@ -15,9 +15,15 @@ public class Abonment implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String desc;
+	private String desciption;
 	private int duree;
 	private Date date;
+	@ManyToOne(cascade = CascadeType.PERSIST) 
+	@JoinColumn(name="idPack", nullable=false)
+	private Pack pack;
+	@ManyToOne(cascade = CascadeType.PERSIST) 
+	@JoinColumn(name="idClient", nullable=false)
+	private Client client;
 	private static final long serialVersionUID = 1L;
 
 	public Abonment() {
@@ -31,11 +37,11 @@ public class Abonment implements Serializable {
 		this.id = id;
 	}   
 	public String getDesc() {
-		return this.desc;
+		return this.desciption;
 	}
 
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.desciption = desc;
 	}   
 	public int getDuree() {
 		return this.duree;
