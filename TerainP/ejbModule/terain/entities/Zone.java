@@ -25,7 +25,7 @@ public class Zone implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nom;
-	@ManyToOne 
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="idVille") //, nullable=false
 	private Ville ville;
 	
