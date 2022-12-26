@@ -21,6 +21,11 @@ public class Client implements Serializable {
 
 	public Client() {
 		super();
+	}  
+	public Client(String nom , String type) {
+		super();
+		this.nom=nom;
+		this.type=type;
 	}   
 	public int getId() {
 		return this.id;

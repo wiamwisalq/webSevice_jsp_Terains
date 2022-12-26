@@ -18,15 +18,20 @@ public class Club implements Serializable {
 	private int id;
 	private String nom;
 	private String type;
-	@ManyToMany
-	List<Terain> terains;
 	@ManyToOne(cascade = CascadeType.PERSIST) 
-	@JoinColumn(name="idPack", nullable=false)
+	@JoinColumn(name="idPack")
 	private Pack pack;
+	
 	private static final long serialVersionUID = 1L;
 
 	public Club() {
 		super();
+	} 
+	public Club(String nom,String type,Pack pack) {
+		super();
+		this.nom=nom;
+		this.type=type;
+		this.pack=pack;
 	}   
 	public int getId() {
 		return this.id;
@@ -48,6 +53,12 @@ public class Club implements Serializable {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+	public Pack getPack() {
+		return pack;
+	}
+	public void setPack(Pack pack) {
+		this.pack = pack;
 	}
    
 }

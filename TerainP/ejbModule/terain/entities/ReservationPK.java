@@ -25,6 +25,12 @@ public class ReservationPK implements Serializable {
 	public ReservationPK() {
 		super();
 	} 
+	public ReservationPK(int client,int terain,Date date) {
+		super();
+		this.client=client;
+		this.terain=terain;
+		this.date_res=date;
+	}
 	public Date getDate_res() {
 		return date_res;
 	}

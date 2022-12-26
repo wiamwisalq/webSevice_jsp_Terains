@@ -28,7 +28,15 @@ public class Abonment implements Serializable {
 
 	public Abonment() {
 		super();
-	}   
+	} 
+	public Abonment(String descri,int duree, Date date, Pack pack,Client client) {
+		super();
+		this.desciption=descri;
+		this.duree=duree;
+		this.date=date;
+		this.pack=pack;
+		this.client=client;
+	}  
 	public int getId() {
 		return this.id;
 	}
@@ -56,6 +64,24 @@ public class Abonment implements Serializable {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public String getDesciption() {
+		return desciption;
+	}
+	public void setDesciption(String desciption) {
+		this.desciption = desciption;
+	}
+	public Pack getPack() {
+		return pack;
+	}
+	public void setPack(Pack pack) {
+		this.pack = pack;
+	}
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
 	}
    
 }

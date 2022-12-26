@@ -15,9 +15,10 @@
 		<class>terain.entities.Test</class>
 		<class>terain.entities.ReservationPK</class>
 		<class>terain.entities.Reservation</class>
+		<class>terain.entities.Reser</class>
 	 	<properties>
 		    <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" />
-		 	<property name="javax.persistence.schema-generation.database.action"  value="drop-and-create"/>
+		    <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
         	
         </properties>
 	</persistence-unit>

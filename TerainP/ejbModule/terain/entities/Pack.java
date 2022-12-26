@@ -18,10 +18,17 @@ public class Pack implements Serializable {
 	private String description;
 	private double prix;
 	private int nbr;
+	
 	private static final long serialVersionUID = 1L;
 
 	public Pack() {
 		super();
+	}
+	public Pack(String description, double prix,int nbr) {
+		super();
+		this.description=description;
+		this.prix=prix;
+		this.nbr=nbr;
 	}   
 	public int getId() {
 		return this.id;

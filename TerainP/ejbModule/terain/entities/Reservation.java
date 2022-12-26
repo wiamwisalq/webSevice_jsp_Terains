@@ -22,6 +22,9 @@ public class Reservation implements Serializable {
 	private Terain service;
 	private static final long serialVersionUID = 1L;
 
+	public Reservation(ReservationPK pk,int duree) {
+		super();
+	}   
 	public Reservation() {
 		super();
 	}   
